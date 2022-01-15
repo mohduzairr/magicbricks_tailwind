@@ -20,6 +20,7 @@
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -46,3 +47,24 @@
     -->
   </body>
 </html>
+  
+<script>
+  $(document).ready(function(){
+    $("#city_effect").mouseenter(function(){
+      $("#up").show(),$("#down").hide();
+    });
+    $("#city_effect").mouseleave(function(){
+      $("#up").hide(),$("#down").show();
+    });
+  });
+
+
+  $(document).ready(function(){
+    $("#login_effect").mouseenter(function(){
+      $("#l_up").show(),$("#l_down").hide();
+    });
+    $("#login_effect").mouseleave(function(){
+      $("#l_up").hide(),$("#l_down").show();
+    });
+  });
+  </script>
