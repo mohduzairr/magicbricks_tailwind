@@ -1,114 +1,42 @@
 import React from 'react'
+import { NearByCities } from './components/NearByCities'
+import { OtherCities } from './components/OtherCities'
+import { PopularCities } from './components/PopularCities'
 
 export const CityBox = ({ctyhide,setCtyhide}) => {
     return (
        <>
-        <div  onMouseEnter={()=>setCtyhide(true)} onMouseLeave={()=>setCtyhide(false)}    className="h-[32rem] w-[48rem] bg-white shadow-2xl ml-40 rounded-2xl flex justify-between">
+        <div  onMouseEnter={()=>setCtyhide(true)} onMouseLeave={()=>setCtyhide(false)}    className="lg:h-[36rem] h-60 lg:w-[52rem] w-[30rem] bg-white shadow-2xl lg:ml-36 ml-10 rounded-2xl flex justify-between">
           <div>
-          <div className="ml-10 text-2xl mt-6">
-          <i class='fas fa-map-marker-alt text-xl text-red'></i>  <span className="font-light">INDIA</span>
+          <div className="ml-10 lg:text-2xl text-sm lg:mt-6 mt-2">
+          <i class='fas fa-map-marker-alt lg:text-xl text-sm text-red'></i>  <span className="font-light">INDIA</span>
           </div>
-             
-          <div className="ml-10  mt-4">
-            <span className="">Nearby Cities</span>
-          </div>
-
-          <div className="flex justify-evenly pl-6 mt-2">
-          <div className="text-sm font-light">
-            <span>Gurgon</span>
-          </div>
-          <div className="ml-10 text-sm font-light">
-            <span>Greater Noida</span>
-          </div>
-          <div className="ml-10 text-sm font-light">
-            <span>Gaziabad</span>
-          </div>
-          <div className="ml-10 text-sm font-light">
-            <span>Noida</span>
-          </div>
+             <NearByCities/>
          
-          </div>
            
           <div className="ml-10  mt-4">
             <span className="">Popular Cities</span>
           </div>
-          <div className="flex justify-evenly pl-10 mt-2">
-          <div className="text-sm font-light">
-            <span>Gurgon</span>
-          </div>
-          
-          <div className="ml-10 text-sm font-light">
-            <span>Greater Noida</span>
-          </div>
-          <div className="ml-10 text-sm font-light">
-            <span>Gaziabad</span>
-          </div>
-          <div className="ml-10 text-sm font-light">
-            <span>Noida</span>
-          </div>
-          <div className="ml-10 text-sm font-light">
-            <span>Noida</span>
-          </div>
-         
-          </div>
+          <PopularCities/>
+          <PopularCities/>
+          <PopularCities/>
+          <PopularCities/>
 
-          <div className="flex justify-evenly pl-10 mt-2">
-          <div className="text-sm font-light">
-            <span>Gurgon</span>
-          </div>
-          <div className="ml-10 text-sm font-light">
-            <span>Greater Noida</span>
-          </div>
-          <div className="ml-10 text-sm font-light">
-            <span>Gaziabad</span>
-          </div>
-          <div className="ml-10 text-sm font-light">
-            <span>Noida</span>
-          </div>
-          <div className="ml-10 text-sm font-light">
-            <span>Noida</span>
-          </div>
          
-          </div>
 
-          <div className="flex justify-evenly pl-10 mt-2">
-          <div className="text-sm font-light">
-            <span>Gurgon</span>
-          </div>
-          <div className="ml-10 text-sm font-light">
-            <span>Greater Noida</span>
-          </div>
-          <div className="ml-10 text-sm font-light">
-            <span>Gaziabad</span>
-          </div>
-          <div className="ml-10 text-sm font-light">
-            <span>Noida</span>
-          </div>
-          <div className="ml-10 text-sm font-light">
-            <span>Noida</span>
-          </div>
-         
-          </div>
 
-          <div className="flex justify-evenly pl-10 mt-2">
-          <div className="text-sm font-light">
-            <span>Gurgon</span>
+          <div className="ml-10  mt-4">
+            <span className="">Other Cities</span>
           </div>
-          <div className="ml-10 text-sm font-light">
-            <span>Greater Noida</span>
-          </div>
-          <div className="ml-10 text-sm font-light">
-            <span>Gaziabad</span>
-          </div>
-          <div className="ml-10 text-sm font-light">
-            <span>Noida</span>
-          </div>
-          <div className="ml-10 text-sm font-light">
-            <span>Noida</span>
-          </div>
-         
-          </div>
-
+           <OtherCities/>
+           <OtherCities/>
+           <OtherCities/>
+           <OtherCities/>
+           <OtherCities/>
+           <OtherCities/>
+           <OtherCities/>
+           <OtherCities/>
+           <OtherCities/>
 
           </div>
 
