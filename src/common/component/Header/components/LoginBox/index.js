@@ -6,7 +6,7 @@ export const LoginBox = ({ lgnhide, setLgnhide }) => {
       <div
         onMouseEnter={() => setLgnhide(true)}
         onMouseLeave={() => setLgnhide(false)}
-        className=" h-96 w-60 bg-white shadow-2xl float-right rounded-2xl  mr-20 pt-5"
+        className=" h-[26rem] w-60 bg-white shadow-2xl float-right rounded-b-2xl border-2 border-bordergrey  mr-20 pt-5 border-t-0 z-20"
       >
           <ul className="pl-7 text-sm">
               <li className="font-light">My Activity</li>
@@ -16,12 +16,17 @@ export const LoginBox = ({ lgnhide, setLgnhide }) => {
               <li className="mt-4 font-semibold"> Searches</li>
 
           </ul>
-          <div className="mt-6 border-t-2 border-t-lightgrey border-b-lightgrey border-b-2  pl-7 pt-5 pb-5">
+          <div className="mt-6 border-t-2 border-t-bordergrey border-b-bordergrey border-b-2  pl-7 pt-5 pb-5">
               <div className="font-semibold"><span>Recommendations</span></div>
              
               <div className="mt-4 font-semibold"><span>My Profile</span></div>
           </div>
-          <button className="text-center h-10 w-32 mt-4 ml-4 bg-lightred ">Login</button>
+          <button className="text-center h-10 w-44 rounded-full mt-4 ml-8 text-white bg-red hover:bg-onclick active:bg-onclick focus:outline-none focus:ring focus:ring-ringred ">Login</button>
+           
+           <div className="ml-6 mt-2">
+               <span className="text-sm font-light ">New to Magicbricks?</span>
+               <span className="text-red ml-1">Sign Up</span>
+           </div>
       
       </div>
     </>
