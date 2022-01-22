@@ -1,5 +1,12 @@
 import React, { useState } from "react";
 import { SubHeader } from "../SubHeader";
+import { BuyBox } from "../SubHeader/components/BuyBox";
+import { HelpBox } from "../SubHeader/components/HelpBox";
+import { HoamloanBox } from "../SubHeader/components/HoamloanBox";
+import { PropertyServicesBox } from "../SubHeader/components/PropertyServicesBox";
+import { RentBox } from "../SubHeader/components/RentBox";
+import { ResourceBox } from "../SubHeader/components/ResourceBox";
+import { SellBox } from "../SubHeader/components/SellBox";
 import { CityBox } from "./components/CityBox";
 import { LoginBox } from "./components/LoginBox";
 
@@ -28,12 +35,9 @@ export const Header = () => {
           <div
             onMouseEnter={() => setCtyhide(true)}
             onMouseLeave={() => setCtyhide(false)}
-            className={`text-lg  text-white   ml-8 lg:ml-12 pt-1 font-light lg:h-12 lg:w-28 h-10 w-14 items-center ${
-              ctyhide ? "bg-white text-red" : ""
-            } pl-2 lg:pl-10 rounded`}
-          >
-            {" "}
-            <span>City</span>{" "}
+            className={`text-lg  text-white   ml-8 lg:ml-12 pt-1 font-light lg:h-12 lg:w-28 h-10 w-14 items-center ${ ctyhide ? "bg-white text-red border-b-white" : "" } pl-2 lg:pl-10 rounded`} >
+            
+            <span>City</span>
             {ctyhide == false ? (
               <i class="fa fa-caret-down text-white"></i>
             ) : (
@@ -65,9 +69,11 @@ export const Header = () => {
           </div>
         </div>
       </div>
-       {/* <div className="w-72 h-96 bg-white float-right mr-16 pr-16 "> */}
-       {lgnhide && <LoginBox lgnhide={lgnhide} setLgnhide={setLgnhide} />}
-      {/* </div> */}
+      {lgnhide &&
+        <div className="w-72 h-[26rem] bg-white float-right  mr-36 pr-16 z-20"> 
+       <LoginBox lgnhide={lgnhide} setLgnhide={setLgnhide} />
+       </div>
+         }
       {ctyhide && <CityBox ctyhide={ctyhide} setCtyhide={setCtyhide} />}
       <SubHeader
         sellhide={sellhide}
@@ -86,9 +92,13 @@ export const Header = () => {
         setHelphide={setHelphide}
       />
 
-     
-
-      
+    { buyhide && <BuyBox setBuyhide={setBuyhide}/> }    
+   { renthide && <RentBox setRenthide={setRenthide}/>}
+   { sellhide &&  <SellBox setSellhide={setSellhide}/>}
+   {hoamloanhide && <HoamloanBox setHoamloanhide={setHoamloanhide}/>}
+   { propertyserviceshide && <PropertyServicesBox setPropertyServiceshide={setPropertyServiceshide}/>}
+  { resourcehide && <ResourceBox setResourcehide={setResourcehide}/>}
+ { helphide && <HelpBox setHelphide={setHelphide}/>}
     </>
   );
 };
