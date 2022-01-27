@@ -6,7 +6,7 @@ export const LoginBox = ({ lgnhide, setLgnhide }) => {
       <div
         onMouseEnter={() => setLgnhide(true)}
         onMouseLeave={() => setLgnhide(false)}
-        className=" h-[26rem] w-60 bg-white shadow-2xl float-right rounded-b-2xl border-2 border-bordergrey   pt-5 border-t-0 "
+        className=" h-[26rem] w-60 bg-white shadow-2xl float-right rounded-b-2xl border-2 border-bordergrey   pt-5 border-t-0 z-20 relative"
       >
           <ul className="pl-7 text-sm">
               <li className="font-light">My Activity</li>

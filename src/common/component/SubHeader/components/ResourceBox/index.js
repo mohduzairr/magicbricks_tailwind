@@ -3,7 +3,7 @@ import React from 'react';
 export const ResourceBox = ({setResourcehide}) => {
   return (
       <>
-         <div onMouseEnter={()=>setResourcehide(true)} onMouseLeave={()=>setResourcehide(false)} className="lg:h-72 shadow-4xl border-t-white border-2 rounded-2xl border-bordergrey lg:w-[28rem] bg-white mt-12 mr-10 flex justify-around float-right ">
+         <div onMouseEnter={()=>setResourcehide(true)} onMouseLeave={()=>setResourcehide(false)} className="lg:h-72 shadow-4xl border-t-white border-2 rounded-2xl border-bordergrey lg:w-[28rem] bg-white mt-14 mr-10 flex justify-around float-right relative ">
            <div className="mt-6 ">
                <span className="text-lg border-b-2 p-2 border-y-bordergrey">News</span> 
                <div className="mt-6 font-light"><span> MB TV</span></div>

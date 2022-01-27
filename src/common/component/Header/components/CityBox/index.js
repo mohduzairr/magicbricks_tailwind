@@ -6,7 +6,7 @@ import { PopularCities } from './components/PopularCities'
 export const CityBox = ({ctyhide,setCtyhide}) => {
     return (
        <>
-        <div  onMouseEnter={()=>setCtyhide(true)} onMouseLeave={()=>setCtyhide(false)}    className="lg:h-[36rem] h-60 lg:w-[52rem] w-[30rem]  bg-white shadow-2xl lg:ml-36 ml-0 rounded-2xl flex justify-between z-20 fixed">
+        <div  onMouseEnter={()=>setCtyhide(true)} onMouseLeave={()=>setCtyhide(false)}    className="lg:h-[36rem] h-60 lg:w-[52rem] w-[30rem] cursor-pointer bg-white shadow-2xl lg:ml-36 ml-0 rounded-2xl flex justify-between z-20 fixed">
           <div>
           <div className="ml-10 lg:text-2xl text-sm lg:mt-6 mt-2">
           <i class='fas fa-map-marker-alt lg:text-xl text-sm text-red'></i>  <span className="font-light">INDIA</span>

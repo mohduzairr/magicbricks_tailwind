@@ -13,6 +13,11 @@ module.exports = {
       yellow:'#ffc72c',
       lightgrey:'#808080',
        bordergrey :'#d7d7d7',
+       yellow:"#ffc72c",
+       skyblue:"#00c1d4",
+       transparentred:" #fff8e2",
+       
+       
 
    },
   },

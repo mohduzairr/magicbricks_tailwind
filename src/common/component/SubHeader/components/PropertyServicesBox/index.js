@@ -3,7 +3,7 @@ import React from 'react';
 export const PropertyServicesBox = ({setPropertyServiceshide}) => {
   return (
       <>
-         <div onMouseEnter={()=>setPropertyServiceshide(true)} onMouseLeave={()=>setPropertyServiceshide(false)} className="lg:h-72 shadow-4xl border-t-white border-2 rounded-2xl border-bordergrey lg:w-[36rem] bg-white mt-12 mr-10 flex justify-around float-right  z-20">
+         <div onMouseEnter={()=>setPropertyServiceshide(true)} onMouseLeave={()=>setPropertyServiceshide(false)} className="lg:h-72 shadow-4xl border-t-white border-2 rounded-2xl border-bordergrey lg:w-[36rem] bg-white mt-14 mr-10 flex justify-around float-right relative ">
            <div className="mt-6 ">
                <span className="text-lg border-b-2 p-2 border-y-bordergrey">Rent Services</span> 
                <div className="mt-6 font-light"><span> Pay Rent</span></div>

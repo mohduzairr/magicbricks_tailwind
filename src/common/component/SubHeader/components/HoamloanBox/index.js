@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const HoamloanBox = (setHoamloanhide) => {
+export const HoamloanBox = ({setHoamloanhide}) => {
   return (
       <>
           <div onMouseEnter={()=>setHoamloanhide(true)} onMouseLeave={()=>setHoamloanhide(false)} className="lg:h-72 shadow-4xl border-t-white border-2 rounded-2xl border-bordergrey lg:w-[48rem] bg-white mt-14 ml-72 flex justify-around fixed ">
