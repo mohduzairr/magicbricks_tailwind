@@ -1,4 +1,5 @@
 import React from "react";
+// import { Link } from "react-router-dom";
 
 export const LoginBox = ({ lgnhide, setLgnhide }) => {
   return (
@@ -25,7 +26,7 @@ export const LoginBox = ({ lgnhide, setLgnhide }) => {
            
            <div className="ml-6 mt-2">
                <span className="text-sm font-light ">New to Magicbricks?</span>
-               <span className="text-red ml-1">Sign Up</span>
+               <span className="text-red ml-1"> Signup</span>
            </div>
       
       </div>
