@@ -1,6 +1,7 @@
 import React from 'react';
 import Footer from '../../common/component/Footer';
 import { Header } from '../../common/component/Header';
+import { SubHeader } from '../../common/component/SubHeader';
 import AdvicesTools from './components/AdvicesTools';
 import ChennaiProperty from './components/ChennaiProperty';
 import CommercialProperty from './components/CommercialProperty';
@@ -13,6 +14,7 @@ const HomePage = () => {
   return( 
          <>
             <Header/>
+            <SubHeader/>
             <SearchBox/>
             <ChennaiProperty/>
             <PropertyBox/>

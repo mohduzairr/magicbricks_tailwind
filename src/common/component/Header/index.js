@@ -65,30 +65,7 @@ export const Header = () => {
        </div>
          }
       {ctyhide && <CityBox ctyhide={ctyhide} setCtyhide={setCtyhide} />}
-      <SubHeader
-        sellhide={sellhide}
-        setSellhide={setSellhide}
-        buyhide={buyhide}
-        setBuyhide={setBuyhide}
-        renthide={renthide}
-        setRenthide={setRenthide}
-        hoamloanhide={hoamloanhide}
-        setHoamloanhide={setHoamloanhide}
-        propertyserviceshide={propertyserviceshide}
-        setPropertyServiceshide={setPropertyServiceshide}
-        resourcehide={resourcehide}
-        setResourcehide={setResourcehide}
-        helphide={helphide}
-        setHelphide={setHelphide}
-      />
-
-    { buyhide && <BuyBox setBuyhide={setBuyhide}/> }    
-   { renthide && <RentBox setRenthide={setRenthide}/>}
-   { sellhide &&  <SellBox setSellhide={setSellhide}/>}
-   {hoamloanhide && <HoamloanBox setHoamloanhide={setHoamloanhide}/>}
-   { propertyserviceshide && <PropertyServicesBox setPropertyServiceshide={setPropertyServiceshide}/>}
-  { resourcehide && <ResourceBox setResourcehide={setResourcehide}/>}
- { helphide && <HelpBox setHelphide={setHelphide}/>}
+     
     </>
   );
 };

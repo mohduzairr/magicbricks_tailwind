@@ -6,6 +6,7 @@ const Signup = () => {
   return(
       <> 
       <Header/>
+      <SubHeader/>
         <div className="flex">
         <div className="bg-[url('signupbgimage.jpeg')] bg-cover h-screen w-1/3 bg-center ">
           

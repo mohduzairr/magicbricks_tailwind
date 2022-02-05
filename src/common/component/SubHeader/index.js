@@ -1,18 +1,48 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { BuyBox } from './components/BuyBox'
+import { HelpBox } from './components/HelpBox'
+import { HoamloanBox } from './components/HoamloanBox'
+import { PropertyServicesBox } from './components/PropertyServicesBox'
+import { RentBox } from './components/RentBox'
+import { ResourceBox } from './components/ResourceBox'
+import { SellBox } from './components/SellBox'
+import SubHeaderBox from './components/SubHeaderBox'
 
-export const SubHeader = ({setSellhide,sellhide,buyhide,setBuyhide,renthide,setRenthide,hoamloanhide,setHoamloanhide,propertyserviceshide,setPropertyServiceshide,setResourcehide,resourcehide,setHelphide,helphide}) => {
+export const SubHeader = () => {
+   const [sellhide, setSellhide] = useState(false);
+  const [buyhide, setBuyhide] = useState(false);
+  const [renthide, setRenthide] = useState(false);
+  const [hoamloanhide, setHoamloanhide] = useState(false);
+  const [propertyserviceshide, setPropertyServiceshide] = useState(false);
+  const [resourcehide, setResourcehide] = useState(false);
+  const [helphide, setHelphide] = useState(false);
+
     return (
        <>
-         <div className="h-14 w-full border-b-2 border-bordergrey shadow-2xl bg-white flex justify-evenly items-center font-light  fixed">
-            <div onMouseEnter={()=>setBuyhide(true)} onMouseLeave={()=>setBuyhide(false)} className={`${ buyhide ? "bg-white text-red border-2 border-bordergrey  rounded-lg mt-2 " : "" } h-14 w-20  text-center pt-4 cursor-pointer`}><span className="lg:text-base text-sm">Buy</span>  { buyhide==false ? <i  class="fa fa-caret-down text-red"></i> : <i  class="fa fa-caret-up text-red ctyhide==true "></i> }</div>
-            <div onMouseEnter={()=>setRenthide(true)} onMouseLeave={()=>setRenthide(false)} className={`${ renthide ? "bg-white text-red border-2 border-bordergrey  rounded-lg mt-2 " : "" } h-14 w-20  text-center pt-4 cursor-pointer`} ><span>Rent</span> { renthide==false ? <i  class="fa fa-caret-down text-red"></i> : <i  class="fa fa-caret-up text-red ctyhide==true "></i> }</div>
-            <div onMouseEnter={()=>setSellhide(true)} onMouseLeave={()=>setSellhide(false)} className={`${ sellhide ? "bg-white text-red border-2 border-bordergrey  rounded-lg mt-2 " : "" } h-14 w-20  text-center pt-4 cursor-pointer`} ><span>Sell</span> { sellhide==false ? <i  class="fa fa-caret-down text-red"></i> : <i  class="fa fa-caret-up text-red ctyhide==true "></i> }   </div>
-            <div onMouseEnter={()=>setHoamloanhide(true)} onMouseLeave={()=>setHoamloanhide(false)} className={`${ hoamloanhide ? "bg-white text-red border-2 border-bordergrey  rounded-lg mt-2 " : "" } h-14 w-24  text-center pt-4 cursor-pointer`}><span className="lg:text-base text-xs">Hoamloan</span> { hoamloanhide==false ? <i  class="fa fa-caret-down text-red"></i> : <i  class="fa fa-caret-up text-red ctyhide==true "></i> }  </div>
-            <div onMouseEnter={()=>setPropertyServiceshide(true)} onMouseLeave={()=>setPropertyServiceshide(false)} className={`${ propertyserviceshide ? "bg-white text-red border-2 border-bordergrey  rounded-lg mt-2 " : "" } h-14 w-36  text-center pt-4 cursor-pointer`}>   <span className="lg:text-base text-xs">Property Services</span> { propertyserviceshide==false ? <i  class="fa fa-caret-down text-red"></i> : <i  class="fa fa-caret-up text-red ctyhide==true "></i> } </div>
-            <div onMouseEnter={()=>setResourcehide(true)} onMouseLeave={()=>setResourcehide(false)} className={`${ resourcehide ? "bg-white text-red border-2 border-bordergrey  rounded-lg mt-2 " : "" } h-14 w-24  text-center pt-4 cursor-pointer`}><span className="lg:text-base text-xs">Resources</span> { resourcehide==false ? <i  class="fa fa-caret-down text-red"></i> : <i  class="fa fa-caret-up text-red ctyhide==true "></i> } </div>
-            <div onMouseEnter={()=>setHelphide(true)} onMouseLeave={()=>setHelphide(false)} className={`${ helphide ? "bg-white text-red border-2 border-bordergrey  rounded-lg mt-2 " : "" } h-14 w-24  text-center pt-4 cursor-pointer`}><span>Help</span> { helphide==false ? <i  class="fa fa-caret-down text-red"></i> : <i  class="fa fa-caret-up text-red ctyhide==true "></i> }</div>
+         <SubHeaderBox
+        sellhide={sellhide}
+        setSellhide={setSellhide}
+        buyhide={buyhide}
+        setBuyhide={setBuyhide}
+        renthide={renthide}
+        setRenthide={setRenthide}
+        hoamloanhide={hoamloanhide}
+        setHoamloanhide={setHoamloanhide}
+        propertyserviceshide={propertyserviceshide}
+        setPropertyServiceshide={setPropertyServiceshide}
+        resourcehide={resourcehide}
+        setResourcehide={setResourcehide}
+        helphide={helphide}
+        setHelphide={setHelphide}
+      />
 
-         </div>
+    { buyhide && <BuyBox setBuyhide={setBuyhide}/> }    
+   { renthide && <RentBox setRenthide={setRenthide}/>}
+   { sellhide &&  <SellBox setSellhide={setSellhide}/>}
+   {hoamloanhide && <HoamloanBox setHoamloanhide={setHoamloanhide}/>}
+   { propertyserviceshide && <PropertyServicesBox setPropertyServiceshide={setPropertyServiceshide}/>}
+  { resourcehide && <ResourceBox setResourcehide={setResourcehide}/>}
+ { helphide && <HelpBox setHelphide={setHelphide}/>}
        </>
     )
 }

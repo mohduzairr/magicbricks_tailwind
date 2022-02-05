@@ -1,17 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
+// import LoginPage from './pages/LoginPage';
 // import Routes from "./routes";
 
-import HomePage from './pages/HomePage';
-import Signup from './pages/SignupPage';
+  import HomePage from './pages/HomePage';
+// import Signup from './pages/SignupPage';
 
 function App() {
   return (
    <>
-   <Signup/>
+   {/* <LoginPage/> */}
+   {/* <Signup/> */}
    {/* <Routes/> */}
    
-   {/* <HomePage/> */}
+    <HomePage/> 
    </>
   );
 }

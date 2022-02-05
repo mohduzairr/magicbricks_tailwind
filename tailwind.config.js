@@ -21,6 +21,8 @@ module.exports = {
        black:"#000000",
        lightskyblue :"#d8e0e7",
        vertlightyellow:"#FFFF99",
+       blue:"	#0000FF",
+       darkgrey:"#d8e0e7",
 
        fonts:{
       fontfamily:"Barlow Semi Condensed',sans-serif",
